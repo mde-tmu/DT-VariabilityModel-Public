@@ -99,6 +99,10 @@ The rationale for each constraint is in [`evidence/constraint_rationale.json`](e
 
 `python3 tools/run_feature_model_analysis.py` runs the model and the scenarios in [`evidence/scenarios.tsv`](evidence/scenarios.tsv) through the FeatureIDE 3.12 library (Java 21 and an Eclipse installation with FeatureIDE are required). The recorded result is in [`evidence/analysis.json`](evidence/analysis.json): the model is satisfiable, with no dead or false-optional features and no redundant constraints, and all 62 scenario records match their expected outcomes.
 
+## From Configuration to Architecture Model
+
+`python3 tools/fm2archml.py CONFIG -m MODEL --project DIR` transforms the cyber-physical, user-interface and connectivity part of a configuration into an ArchML4IoT architecture model. The generated models for the garage door, fire alarm, smart light and smart warehouse examples, and the assumptions the script makes, are in [`archml4iot/`](archml4iot/README.md).
+
 ## Regenerating Visuals
 
 The Markdown and DOT views are generated from the FeatureIDE XML and the two example configurations, and each DOT file is rendered with Graphviz:
