@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<archML4IoT:ArchML4IoT xmlns:archML4IoT="http://www.example.org/archML4IoT" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <system physical_entity="//@physical_entity.0" name="Smart Warehouse" virtual_entity="//@virtual_entity.0" />
+  <physical_entity controller="//@controller.0" name="Physical Entity" />
+  <virtual_entity resource="//@resource.0 //@resource.1" system_hub="//@system_hub.0" name="Virtual Entity" />
+  <resource xsi:type="archML4IoT:On_Device_Resource" name="Local Resource" />
+  <resource xsi:type="archML4IoT:Environment_Data" name="GCP" computing="Cloud" environment_data="//@resource.1" sensor="//@device.0 //@device.1 //@device.2" tag="//@device.3" env_name="Virtual Env" />
+  <system_hub user_interface="//@user_interface.0 //@user_interface.1" name="Server" access="//@resource.0 //@resource.1" />
+  <controller xsi:type="archML4IoT:Logic_Unit" name="Controller" core="Logic_Unit" store="//@resource.0" device="//@device.4 //@device.5 //@device.6 //@device.7 //@device.0 //@device.1 //@device.2 //@device.3" logic_unit="//@controller.0" network_device="//@network_device.0" type="Single_Board_Computers" />
+  <user_interface xsi:type="archML4IoT:Dashboard" name="Dashboard" />
+  <user_interface xsi:type="archML4IoT:Mobile_App" name="App" />
+  <network_device name="WiFi Adapter" cloud_database="//@resource.1" />
+  <device xsi:type="archML4IoT:Sensor" name="Temperature_Sensor" type="Thermometer" />
+  <device xsi:type="archML4IoT:Sensor" name="Humidity_Sensor" type="Humidity_Sensor" />
+  <device xsi:type="archML4IoT:Sensor" name="Proximity_Sensor" />
+  <device xsi:type="archML4IoT:Tag" name="RFID Tag" type="RFID" />
+  <device xsi:type="archML4IoT:Actuator" name="Alarm" type="Speaker" />
+  <device xsi:type="archML4IoT:Actuator" name="Servo_Motor" type="Motor" />
+  <device xsi:type="archML4IoT:Actuator" name="DC_Motor" type="Motor" />
+  <device xsi:type="archML4IoT:Actuator" name="Relay" />
+  <arch_frame name="Edge Layer and Devices" />
+  <arch_frame name="Cloud Layer" />
+</archML4IoT:ArchML4IoT>

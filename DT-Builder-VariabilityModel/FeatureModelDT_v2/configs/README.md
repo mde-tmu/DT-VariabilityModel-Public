@@ -12,6 +12,19 @@ These configurations target `FeatureModelDT_v2/model.xml`.
   dashboard interfaces, cloud connectivity, and human-actuated or
   human-supervised commands.
 
+- `garage_door.xml`: 47 selected features. A statechart model with code
+  generation, a single-board controller with ultrasonic and PIR sensors, an RFID
+  reader and a servo motor, an interactive dashboard and an Android app, GCP
+  cloud integration, and streaming integration.
+- `fire_alarm.xml`: 47 selected features. The same structure as the garage door
+  with gas, flame and temperature sensors and a buzzer.
+- `smart_light.xml`: 45 selected features. The same structure with a PIR sensor
+  and an LED.
+
+The garage door, fire alarm and smart light selections follow the system
+descriptions of the ArchML4IoT evaluation (Zha et al.) and are the inputs of
+`tools/fm2archml.py`, which generates the ArchML4IoT models in `archml4iot/`.
+
 Both are constructed engineering examples, not implemented systems or evidence of
 usefulness/safety.
 
